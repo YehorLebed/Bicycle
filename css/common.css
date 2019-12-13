@@ -1,14 +1,18 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
 @import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,700&display=swap');
 
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *, 
 *:before, 
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
 }
@@ -65,10 +69,19 @@ p {
 }
 
 .section-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 
@@ -107,20 +120,31 @@ p {
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .col-big {
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 15px;
   background-color: #353738;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%;
-  flex-basis: 96%;
+  -ms-flex-preferred-size: 96%;
+      flex-basis: 96%;
 }
 
 .about__image-block{
@@ -132,8 +156,10 @@ p {
 
 .col-small {
   width: 33.33%;
-  flex-basis: 33.33%;
-  flex-shrink: 0;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .about__text-block {
@@ -163,8 +189,9 @@ p {
 
 .gallery-wrap {
   min-height: 534px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  overflow: hi;
 }
 
 .gallery .container {
@@ -172,12 +199,16 @@ p {
 }
 
 .gallery-wrap .col-small {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .w-50 {
   width: 50%;
-  flex-basis: 50%;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
   z-index: 5;
 }
 
@@ -202,6 +233,8 @@ p {
   height: 0;
   z-index: 1;
   background-color: rgba(100, 194, 158, 0.8);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   opacity: 0;
 }
@@ -217,7 +250,11 @@ p {
   height: 55px;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
   z-index: 2;
   opacity: 0;
@@ -239,7 +276,9 @@ p {
 .gallery-item {
   position: relative;
   width: 100%;
-  flex-grow: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   overflow: hidden;
 }
 
@@ -247,7 +286,9 @@ p {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   min-height: 100%;
   min-width: 100%;
 }
