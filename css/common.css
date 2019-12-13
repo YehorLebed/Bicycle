@@ -47,6 +47,9 @@ img {
   padding: 0 15px;
   margin: 0 auto;
 }
+.about .container {
+  padding: 0;
+}
 
 
 body {
@@ -73,6 +76,7 @@ p {
 .section-big {
   padding: 115px 0 145px;
   text-align: center;
+  background: #f7f7f7;
 }
 
 .heading-img {
@@ -100,6 +104,152 @@ p {
 .section-big p {
   max-width: 1080px;
   width: 100%;
+}
+
+.row {
+  display: flex;
+}
+
+.col-big {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background-color: #353738;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  flex-basis: 96%;
+}
+
+.about__image-block{
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.col-small {
+  width: 33.33%;
+  flex-basis: 33.33%;
+  flex-shrink: 0;
+}
+
+.about__text-block {
+  padding: 70px 68px 54px;
+  position: relative;
+  background: #fff;
+  text-align: center;
+  min-height: 300px;
+}
+
+.about__text-block p{
+  color: #848789;
+  text-align: justify;
+  margin-bottom: 38px;
+  font-size: 16px;
+}
+
+.about__text-block img {
+  max-height: 41px;
+  width: auto;
+  margin-bottom: 28px;
+}
+
+.about__text-block .title-18 {
+  margin-bottom: 22px;
+}
+
+.gallery-wrap {
+  min-height: 534px;
+  display: flex;
+  overflow: hi;
+}
+
+.gallery .container {
+  padding: 0;
+}
+
+.gallery-wrap .col-small {
+  display: flex;
+  flex-wrap: wrap;
+}
+.w-50 {
+  width: 50%;
+  flex-basis: 50%;
+  z-index: 5;
+}
+
+.h-50 {
+  height: 50%;
+  z-index: 5;
+}
+
+.gallery-item a {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery-item a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  width: 0;
+  height: 0;
+  z-index: 1;
+  background-color: rgba(100, 194, 158, 0.8);
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.gallery-item a::after { 
+  content: '';
+  position: absolute;
+  background-image: url('../images/shop-now-icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 95px;
+  height: 55px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.3s;
+  z-index: 2;
+  opacity: 0;
+}
+
+.gallery-item a:hover::before,
+.gallery-item a:hover::after {
+  opacity: 1;
+}
+.gallery-item a:hover::before {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.gallery-item img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100%;
+  min-width: 100%;
 }
 
 /* Styles for SECTION-SMALL */

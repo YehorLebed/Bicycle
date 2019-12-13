@@ -3,10 +3,21 @@ $(function () {
   let body = document.querySelector('body');
 
   // Main block swiper settings
-  let mainSwiper = new Swiper('.swiper-container', {
+  let mainSwiper = new Swiper('.main-swiper-container', {
     loop: true,
     autoplay: true,
     speed: 1000
+  });
+
+  let commentSwiper = new Swiper('.comments-swiper-container', {
+    loop: true,
+    autoHeight: true,
+    autoplay: true,
+    speed: 1000,
+    pagination: {
+      el: '.comments-swiper-pagination',
+      clickable: true
+    }
   });
 
   // Burger menu toggle function
